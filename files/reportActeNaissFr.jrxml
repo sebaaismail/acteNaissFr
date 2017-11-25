@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportActeNaissFr" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9136fb7-00bd-4c74-bf23-014b7485d204">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="461"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[adresse]]></fieldDescription>
+	</field>
+	<field name="commune" class="java.lang.String">
+		<fieldDescription><![CDATA[commune]]></fieldDescription>
+	</field>
+	<field name="daira" class="java.lang.String">
+		<fieldDescription><![CDATA[daira]]></fieldDescription>
+	</field>
+	<field name="date_copie" class="java.util.Date">
+		<fieldDescription><![CDATA[date_copie]]></fieldDescription>
+	</field>
+	<field name="date_dresse" class="java.util.Date">
+		<fieldDescription><![CDATA[date_dresse]]></fieldDescription>
+	</field>
+	<field name="date_naiss_cit" class="java.util.Date">
+		<fieldDescription><![CDATA[date_naiss_cit]]></fieldDescription>
+	</field>
+	<field name="declarant" class="java.lang.String">
+		<fieldDescription><![CDATA[declarant]]></fieldDescription>
+	</field>
+	<field name="fait_le" class="java.util.Date">
+		<fieldDescription><![CDATA[fait_le]]></fieldDescription>
+	</field>
+	<field name="fullname_conj" class="java.lang.String">
+		<fieldDescription><![CDATA[fullname_conj]]></fieldDescription>
+	</field>
+	<field name="fullname_mere" class="java.lang.String">
+		<fieldDescription><![CDATA[fullname_mere]]></fieldDescription>
+	</field>
+	<field name="fullname_pere" class="java.lang.String">
+		<fieldDescription><![CDATA[fullname_pere]]></fieldDescription>
+	</field>
+	<field name="heure_dresse" class="java.lang.String">
+		<fieldDescription><![CDATA[heure_dresse]]></fieldDescription>
+	</field>
+	<field name="heure_naiss_cit" class="java.lang.String">
+		<fieldDescription><![CDATA[heure_naiss_cit]]></fieldDescription>
+	</field>
+	<field name="is_f" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[is_f]]></fieldDescription>
+	</field>
+	<field name="lieu_naiss_cit" class="java.lang.String">
+		<fieldDescription><![CDATA[lieu_naiss_cit]]></fieldDescription>
+	</field>
+	<field name="mar_le" class="java.util.Date">
+		<fieldDescription><![CDATA[mar_le]]></fieldDescription>
+	</field>
+	<field name="nom_cit" class="java.lang.String">
+		<fieldDescription><![CDATA[nom_cit]]></fieldDescription>
+	</field>
+	<field name="num_acte" class="java.lang.Integer">
+		<fieldDescription><![CDATA[num_acte]]></fieldDescription>
+	</field>
+	<field name="prenom_cit" class="java.lang.String">
+		<fieldDescription><![CDATA[prenom_cit]]></fieldDescription>
+	</field>
+	<field name="wilaya" class="java.lang.String">
+		<fieldDescription><![CDATA[wilaya]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="703" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="703" uuid="6a60145f-eb5c-4847-8943-3702bbfec80f"/>
+				<imageExpression><![CDATA["C:\\MySources\\Java\\acteNaissFr\\files\\masque.JPG"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>
