@@ -1,4 +1,5 @@
 package com.sebaainf.acteNaissFr.common;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 
 import java.util.Date;
@@ -80,6 +81,10 @@ public class Acte extends Bean{
 	private String fullname_conj = "";
 	private java.util.Date fait_le = MyApp.defaultDate;
 
+
+
+	private SimpleDateFormat simpleDateFormat;
+
 	//******************************************************
 	@AGetterMapping(databaseGenerated = true)
 	
@@ -146,6 +151,14 @@ public class Acte extends Bean{
 	public java.util.Date getFait_le() {
 		return fait_le;
 	}
+	public SimpleDateFormat getSimpleDateFormat() {
+		return simpleDateFormat;
+	}
+
+	public void setSimpleDateFormat(SimpleDateFormat simpleDateFormat) {
+		this.simpleDateFormat = simpleDateFormat;
+	}
+
 	public void setId_acte(int newValue) {
 	
 		int oldValue = this.id_acte;

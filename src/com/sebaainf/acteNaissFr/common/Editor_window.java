@@ -53,9 +53,9 @@ public class Editor_window extends IsmAbstractJFrame {
     private ActeEditorModel 	acteModel;
 
 
-    public JTextField commune = new JTextField("Boufatis");
-    private JTextField daira = new JTextField("Oued Tlelat");
-    private JTextField wilaya= new JTextField("Oran");
+    public JLabel commune = new JLabel();
+    private JLabel daira = new JLabel();
+    private JLabel wilaya= new JLabel();
         
 
 	private JTextField num_acte;
@@ -85,26 +85,29 @@ public class Editor_window extends IsmAbstractJFrame {
     
 //*******************************
 
-   //TODO not verified pour sprint1
     protected JButton validerAddButton;
     protected JButton annulerButton;
     protected JButton imprimerButton;
     protected JButton annulerModifButton;
 
     //***************************************************************
-
     public Editor_window(ActeEditorModel acteModel) {
+        this(acteModel, true);
+    }
 
+    public Editor_window(ActeEditorModel acteModel, boolean add_mode) {
+
+        this.add_mode = add_mode;
         int idact = ((Acte)(acteModel.getBean())).getID_acte();
 
-        // check if mode is add new attest 
+        // check if mode is add new object
       //TODO not verified pour sprint1
         //maybe set add_mod false for sprint1
         if ((idact <= 0)) {
             this.add_mode = true;
         }
         //TODO after search engine must handle the add_mode
-        this.add_mode = false; // for offline without db
+        //this.add_mode = true; // for offline without db
 
         this.acteModel = acteModel;
         initComponents();
@@ -131,7 +134,7 @@ public class Editor_window extends IsmAbstractJFrame {
         if (this.add_mode) {
             validerAddButton.setText("Ajouter");
             annulerButton.setVisible(false);
-            imprimerButton.setVisible(false);
+            imprimerButton.setEnabled(false);
             annulerModifButton.setVisible(false);
 
         } else {
@@ -141,15 +144,15 @@ public class Editor_window extends IsmAbstractJFrame {
             annulerModifButton.setVisible(false);
         }
 
-        this.setTitle("Application ACTE DE NAIISANCE (Francais)                        " +
+        this.setTitle("Application ACTE DE NAIISANCE (en Francais)                        " +
                 "                                                           " +
                 "                                               Boufatis©2017");
-        commune.setText("بوفاطيس");
-        daira.setText("وادي تليلات");
-        wilaya.setText("وهران");
-        commune.setEnabled(false);
-        daira.setEnabled(false);
-        wilaya.setEnabled(false);
+        commune.setText(MyApp.commune);
+        daira.setText(MyApp.daira);
+        wilaya.setText(MyApp.wilaya);
+        //commune.setEnabled(false);
+        //daira.setEnabled(false);
+        //wilaya.setEnabled(false);
         
         adresse = IsmComponentFactory.createTextField(acteModel.getAdresse());
         nom_cit = IsmComponentFactory.createTextField(acteModel.getNom_cit());
@@ -167,7 +170,7 @@ public class Editor_window extends IsmAbstractJFrame {
         mar_le = IsmComponentFactory.createDatePickerImpl(acteModel,
                 Acte.PROPERTY_MAR_LE, "dd/MM/yyyy");
 
-        declarant = IsmComponentFactory.createArabTextField(acteModel.getDeclarant());
+        declarant = IsmComponentFactory.createTextField(acteModel.getDeclarant());
         fullname_conj = IsmComponentFactory.createTextField(acteModel.getFullname_conj());
         fullname_mere = IsmComponentFactory.createTextField(acteModel.getFullname_mere());
         fullname_pere = IsmComponentFactory.createTextField(acteModel.getFullname_pere());
@@ -190,7 +193,7 @@ public class Editor_window extends IsmAbstractJFrame {
         prenom_cit.setPreferredSize(date_naiss_cit.getPreferredSize());
 
         num_acte.setColumns(8);
-        num_acte.setHorizontalAlignment(JTextField.RIGHT);
+        //num_acte.setHorizontalAlignment(JTextField.RIGHT);
 
         declarant.setColumns(20);
         
@@ -284,8 +287,15 @@ public class Editor_window extends IsmAbstractJFrame {
     }
 
     private JComponent citEditorPanel() {
-    	int x = 1, y = 1;
+    	int x = 1, y = 7;
 
+
+        wilaya.setText("<html><font color='#77b300'>Wilaya : "
+                + wilaya.getText() + "</font></html>");
+        daira.setText("<html><font color='#77b300'>Daira : "
+                + daira.getText() + "</font></html>");
+        commune.setText("<html><font color='#77b300'>Commune : "
+                + commune.getText() + "</font></html>");
         // Building citEditorPanel()
 
 
@@ -297,6 +307,11 @@ public class Editor_window extends IsmAbstractJFrame {
                         + "p, $lgap, p, 6dlu, p, $lgap, p, $lgap, p, $lgap, p, $lgap, p, $pgap, p, $lgap, p")//for mention Zone
                 //.columnGroups(new int[][]{{1, 5}})
                 .padding(Paddings.DLU9)
+
+                        //.add("Wilaya :").xy(1, 1)
+                .add(wilaya).xy(3, 1)
+                .add(daira).xy(3, 3)
+                .add(commune).xy(3, 5)
 
                 .add("Nom :").xy(1, y)
                 .add(nom_cit).xy(3, y)
@@ -335,11 +350,10 @@ public class Editor_window extends IsmAbstractJFrame {
                 .add("avec :").xy(5, y + 12)
                 .add(fullname_conj).xy(7, y+12)
 
-                .add("Fait le :").xy(1, y+14)
-                .add(fait_le).xy(3, y+14)
+                .add("Fait le :").xy(1, y + 14)
+                .add(fait_le).xy(3, y + 14)
 
-               
-                
+
                 .build();
 
     }
@@ -363,11 +377,9 @@ public class Editor_window extends IsmAbstractJFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-            	//TODO
-            	//verifierType();
-            	//---> function_set_3coches();
-                //ReportedBean bean = ReportView.getMyAttest().iterator().next();
+
                 ReportedBean bean = new ReportedBean(acteModel.getBean());
+                //ReportedBean bean = new ReportedBean(MyApp.getObj()); //TODO delete this test line or comment it and uncomment the previous line
 
                 ReportView.report(bean.getActe());
             }

@@ -9,7 +9,11 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
 import java.awt.*;
 import java.lang.reflect.InvocationTargetException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -104,7 +108,17 @@ public class IsmTableAdapter extends AbstractTableAdapter {
         for (int i = 0; i < columnNames.length; i++) {
             if (columnIndex == i) {
                 try {
+                    // Hundle the colomn of type date to show it
+                    // in short format in the table
+                if (i==3) {
+                    SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
+                    String str = dateFormatter.format(PropertyUtils.getProperty(obj, columnNames[i]));
+                    return str;
+                } else {
                     return PropertyUtils.getProperty(obj, columnNames[i]);
+                }
+
+
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (InvocationTargetException e) {

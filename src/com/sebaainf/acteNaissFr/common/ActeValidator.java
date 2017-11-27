@@ -26,9 +26,9 @@ public class ActeValidator extends IsmValidator implements Validator<Object> {
     public ValidationResult validate(Object attest) {
 
    	    IsmPrintStream.logging("validating attestation ...");
-        addBlankError(Acte.PROPERTY_WILAYA, "wilaya");
-        addBlankError(Acte.PROPERTY_DAIRA, "daira");
-        addBlankError(Acte.PROPERTY_COMMUNE, "commune");
+        addBlankError(Acte.PROPERTY_WILAYA, "wilaya sur fichier xml");
+        addBlankError(Acte.PROPERTY_DAIRA, "daira sur fichier xml");
+        addBlankError(Acte.PROPERTY_COMMUNE, "commune sur fichier xml");
         addBlankError(Acte.PROPERTY_NOM_CIT, "nom_cit");
         addBlankError(Acte.PROPERTY_PRENOM_CIT, "prenom_cit");
         
@@ -44,6 +44,16 @@ public class ActeValidator extends IsmValidator implements Validator<Object> {
         
         addBlankError(Acte.PROPERTY_MAR_LE, "mar_le");
         addBlankError(Acte.PROPERTY_NUM_ACTE, "num_acte");
+
+        return validationResult;
+    }
+
+    @Override
+    public ValidationResult validateForSearch(Object o) {
+        IsmPrintStream.logging("validating search acte object...");
+        addBlankError(Acte.PROPERTY_NOM_CIT, "nom_cit");
+        addBlankError(Acte.PROPERTY_PRENOM_CIT, "prenom_cit");
+
 
         return validationResult;
     }

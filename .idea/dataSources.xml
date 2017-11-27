@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1820407102">
+    <data-source source="LOCAL" name="H2 - acteNaissFr_db" uuid="d7c868cd-d748-4e82-a1b1-26bfb6451093">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:$PROJECT_DIR$/db/acteNaissFr_db</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$PROJECT_DIR$/lib/h2-1.4.191.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>

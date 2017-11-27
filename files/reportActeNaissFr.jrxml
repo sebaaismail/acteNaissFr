@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportActeNaissFr" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9136fb7-00bd-4c74-bf23-014b7485d204">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="461"/>
+	<property name="ireport.y" value="276"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -66,6 +66,9 @@
 	<field name="wilaya" class="java.lang.String">
 		<fieldDescription><![CDATA[wilaya]]></fieldDescription>
 	</field>
+	<field name="simpleDateFormat" class="java.text.SimpleDateFormat">
+		<fieldDescription><![CDATA[simpleDateFormat]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -75,6 +78,69 @@
 				<reportElement x="0" y="0" width="555" height="703" uuid="6a60145f-eb5c-4847-8943-3702bbfec80f"/>
 				<imageExpression><![CDATA["C:\\MySources\\Java\\acteNaissFr\\files\\masque.JPG"]]></imageExpression>
 			</image>
+			<textField>
+				<reportElement x="223" y="124" width="100" height="20" uuid="2092f5cb-3144-4173-8bd7-73e4df073ee9"/>
+				<textFieldExpression><![CDATA[$F{date_naiss_cit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="144" width="100" height="20" uuid="47303935-430d-4005-bbae-629ae9336b87"/>
+				<textFieldExpression><![CDATA[$F{heure_naiss_cit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="164" width="100" height="20" uuid="1bcabb0d-9f1f-4358-9b57-a4b5b25c7ead"/>
+				<textFieldExpression><![CDATA[$F{nom_cit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="164" width="100" height="20" uuid="a6dc7f31-608a-4365-9cc0-79b9c1e746de"/>
+				<textFieldExpression><![CDATA[$F{prenom_cit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="184" width="100" height="20" uuid="fa4f3236-239a-4091-9174-580cd9e017cc"/>
+				<textFieldExpression><![CDATA[$F{is_f}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="204" width="100" height="20" uuid="e65951fa-de30-4a04-8a73-30c3ba298aea"/>
+				<textFieldExpression><![CDATA[$F{fullname_pere}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="224" width="100" height="20" uuid="2f1686b7-6437-4ac9-bd2a-670d4d453398"/>
+				<textFieldExpression><![CDATA[$F{fullname_mere}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="244" width="213" height="20" uuid="3ba070f1-9193-4050-a961-9e845d55638a"/>
+				<textFieldExpression><![CDATA[$F{adresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="264" width="100" height="20" uuid="42fe4c5c-54b4-4aa7-947a-388421437fc4"/>
+				<textFieldExpression><![CDATA[$F{date_dresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="284" width="100" height="20" uuid="b47797a0-e5cc-426d-af4b-8082f7e56c77"/>
+				<textFieldExpression><![CDATA[$F{heure_dresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="304" width="229" height="20" uuid="a3434394-9a56-494f-878a-8a8a5584790f"/>
+				<textFieldExpression><![CDATA[$F{declarant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="559" width="100" height="20" uuid="d900caed-0258-4af1-867b-97e977f2f754"/>
+				<textFieldExpression><![CDATA[$F{date_copie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="421" width="23" height="82" uuid="f53e4e44-f2db-4943-ae41-8e5d329b7c07"/>
+				<textElement rotation="Left"/>
+				<textFieldExpression><![CDATA[$F{simpleDateFormat}.format($F{mar_le})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="404" width="26" height="124" uuid="59052ec5-eb27-43f1-8bdc-918a284ca88b"/>
+				<textElement rotation="Left"/>
+				<textFieldExpression><![CDATA[$F{fullname_conj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="421" width="26" height="99" uuid="14353de4-bbe7-45b7-869d-c4559ae960c7"/>
+				<textElement rotation="Left"/>
+				<textFieldExpression><![CDATA[$F{fait_le}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

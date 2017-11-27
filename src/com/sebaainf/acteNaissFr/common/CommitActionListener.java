@@ -42,7 +42,6 @@ public class CommitActionListener implements ActionListener {
 
     	this.wind = wind;
         this.actModel = actModel;
-        //TODO this.divorceRadioButton = divorceRadioButton;
         this.add_mode = add_mode;
         this.actTrigger = (Trigger) actModel.getTriggerChannel();
         //this.listComp = listComp;
@@ -75,7 +74,9 @@ public class CommitActionListener implements ActionListener {
             if (resultAttest.hasErrors()) {
                 correct = false;
                 if (resultAttest.getMessages().size() > 2) {
-                    message = "أدخل بيانات المواطن"  + "\n";
+                    //message = "Veuillez entrer les données !"  + "\n";
+                    message += resultAttest.getMessagesText();
+
                 } else {
                     message += resultAttest.getMessagesText();
                 }
@@ -84,11 +85,14 @@ public class CommitActionListener implements ActionListener {
             	wind.imprimerButton.setEnabled(true);
 
                 if (add_mode) {
-					/* TODO
 				    textMode = "added";
-				    MyDaosCitoyen.insertCitoyen((Citoyen) citModel.getBean());
-				    int i = MyDaos.ism_lastGeneratedId("citoyen", "id_cit");
-				            ((Mention) mentModel.getBean()).setId_cit(i);
+                    try {
+                        MyDaosActe.insertActe((Acte) actModel.getBean());
+                    } catch (PersistenceException e1) {
+                        e1.printStackTrace();
+                    }
+                    int i = MyDaos.ism_lastGeneratedId("actes", "id_acte");
+				            ((Acte) actModel.getBean()).setId_acte(i);
 				           //*/ 
                 	//* Offline mode
                 	Acte acte = actModel.getBean();
@@ -96,8 +100,12 @@ public class CommitActionListener implements ActionListener {
                 	//*/
 				} else {
 				    // we are in update mode
-				    //TODO MyDaosCitoyen.updateCitoyen((Citoyen) citModel.getBean());
-				}
+                    try {
+                        MyDaosActe.updateActe((Acte) actModel.getBean());
+                    } catch (PersistenceException e1) {
+                        e1.printStackTrace();
+                    }
+                }
 				IsmPrintStream.logging("acte " + textMode + " !");
 				
 

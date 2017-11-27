@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.TreeSet;
 
 /**
- * Created by admin on 10/01/2015.
+ * Created by smail on 27/11/2017.
  */
 public class MyDaos {
 
@@ -25,11 +25,11 @@ public class MyDaos {
      */
 
     static String driver = "org.h2.Driver";
-    static String database = "db_acte_naiss_fr";
-    static String user = "admin";
+    static String database = "actenaissfr_db";
+    static String user = "sa";
     static String password = "";
     //    String url = "jdbc:mysql"://127.0.0.1/dbfichfamil";
-    static String url = "jdbc:h2:~/" + database;
+    static String url = "jdbc:h2:file:./db/" + database;
 
     protected final static DataSource datasource = new SimpleDataSource(driver, url, user, password);
 
@@ -60,12 +60,11 @@ public class MyDaos {
     /**
      * @param nom
      * @param prenom
-     * @param inFrench
      * @return
      * @throws PersistenceException
-     * @should return list of attest that match nom, prenom parameters
+     * @should return list of actes that match nom, prenom parameters
      */
-    public static List<Acte> getListAttest(String nom, String prenom, boolean inFrench) throws PersistenceException {
+    public static List<Acte> getListObject(String nom, String prenom) throws PersistenceException {
 
         List<Acte> list = new ArrayList<Acte>();
 
@@ -73,13 +72,10 @@ public class MyDaos {
             if (!nom.equals("") && !prenom.equals("")) {
 
                 String sql = "";
-                if (inFrench) {
-                    sql = "select * from attest where nomFR_cit like '"
-                            + nom + "%' and prenomFR_cit like '" + prenom + "%'";
-                } else {
-                    sql = "select * from attest where nom_cit like '"
+
+                    sql = "select * from actes where nom_cit like '"
                             + nom + "%' and prenom_cit like '" + prenom + "%'";
-                }
+
                 IDaos daos = MyDaos.persistenceManager.createDaos();
                 list = daos.getObjectDao().readList(Acte.class, sql);
             }

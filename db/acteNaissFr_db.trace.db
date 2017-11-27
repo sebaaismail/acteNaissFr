@@ -1,0 +1,1417 @@
+2017-11-27 15:55:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE LONG UNSIGNED,
+
+  UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte LONG UNSIGNED,
+
+  UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 15:57:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE LONG UNSIGNED,
+
+  UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte LONG UNSIGNED,
+
+  UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 16:00:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE LONG UNSIGNED,
+
+  UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte LONG UNSIGNED,
+
+  UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit) [42001-191]
+2017-11-27 16:12:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE INT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint
+) [42001-191]
+2017-11-27 16:12:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE INT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint
+) [42001-191]
+2017-11-27 16:12:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE INT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint
+) [42001-191]
+2017-11-27 16:13:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES(
+  ID_ACTE INT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes(
+  id_acte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint
+) [42001-191]
+2017-11-27 16:16:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACTES" already exists; SQL statement:
+CREATE TABLE actes(
+  id_acte INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint
+) [42101-191]
+2017-11-27 16:17:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE LONG UNSIGNED,
+
+  UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte LONG UNSIGNED,
+
+  UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 16:21:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT ,
+ 
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint ,
+ 
+) [42001-191]
+2017-11-27 16:21:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT ,
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint ,
+
+) [42001-191]
+2017-11-27 16:22:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT ,
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint ,
+
+) [42001-191]
+2017-11-27 16:22:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT ,
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint ,
+) [42001-191]
+2017-11-27 16:22:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT ,
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint ,
+) [42001-191]
+2017-11-27 16:22:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT ,
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint ,
+) [42001-191]
+2017-11-27 16:22:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT ,
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint ,
+) [42001-191]
+2017-11-27 16:22:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint
+) [42001-191]
+2017-11-27 16:22:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+  ID_ACTE BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+  ADRESSE VARCHAR(100) NULL,
+  COMMUNE VARCHAR(60) NULL,
+  WILAYA VARCHAR(60) NULL,
+  DAIRA VARCHAR(60) NULL,
+  DATE_COPIE DATE NULL,
+  DATE_DRESSE DATE NULL,
+  DATE_NAISS_CIT DATE NULL,
+  DECLARANT VARCHAR(80) NULL,
+  FAIT_LE VARCHAR(80) NULL,
+  FULLNAME_CONJ VARCHAR(80) NULL,
+  FULLNAME_MERE VARCHAR(80) NULL,
+  FULLNAME_PERE VARCHAR(80) NULL,
+  HEURE_DRESSE VARCHAR(80) NULL,
+  HEURE_NAISS_CIT VARCHAR(80) NULL,
+  IS_F BOOLEAN DEFAULT FALSE,
+  LIEU_NAISS_CIT VARCHAR(60)NULL,
+  MAR_LE VARCHAR(60) NULL,
+  NOM_CIT VARCHAR(40) NOT NULL,
+  PRENOM_CIT VARCHAR(40) NOT NULL,
+  NUM_ACTE BIGINT
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+  id_acte bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  adresse VARCHAR(100) NULL,
+  commune VARCHAR(60) NULL,
+  wilaya VARCHAR(60) NULL,
+  daira VARCHAR(60) NULL,
+  date_copie DATE NULL,
+  date_dresse DATE NULL,
+  date_naiss_cit DATE NULL,
+  declarant VARCHAR(80) NULL,
+  fait_le VARCHAR(80) NULL,
+  fullname_conj VARCHAR(80) NULL,
+  fullname_mere VARCHAR(80) NULL,
+  fullname_pere VARCHAR(80) NULL,
+  heure_dresse VARCHAR(80) NULL,
+  heure_naiss_cit VARCHAR(80) NULL,
+  is_f BOOLEAN DEFAULT FALSE,
+  lieu_naiss_cit VARCHAR(60)NULL,
+  mar_le VARCHAR(60) NULL,
+  nom_cit VARCHAR(40) NOT NULL,
+  prenom_cit VARCHAR(40) NOT NULL,
+  num_acte bigint
+) [42001-191]
+2017-11-27 18:57:56 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2460)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:323)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$255(TCPTransport.java:683)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$1/17599438.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 40 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
+	... 35 more
+2017-11-27 19:00:51 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2460)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:323)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$255(TCPTransport.java:683)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$1/17599438.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 40 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
+	... 35 more
+2017-11-27 19:48:45 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2460)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at com.jenkov.db.jdbc.SimpleDataSource.getConnection(SimpleDataSource.java:104)
+	at com.jenkov.db.PersistenceManager.createDaos(PersistenceManager.java:250)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getSetActes(MyDaosActe.java:60)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getListActes(MyDaosActe.java:80)
+	at com.sebaainf.acteNaissFr.common.SearchObject_window$AttestValidationAction.actionPerformed(SearchObject_window.java:243)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 64 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/acteNaissFr_db.mv.db [1.4.191/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
+	... 59 more
+2017-11-27 19:49:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "select * from actes where nom_cit='s' and prenom_cit=[*]'i"; SQL statement:
+select * from actes where nom_cit='s' and prenom_cit='i [42000-191]
+2017-11-27 19:50:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "select * from actes where nom_cit='sebaa' and prenom_cit=[*]'ismail"; SQL statement:
+select * from actes where nom_cit='sebaa' and prenom_cit='ismail [42000-191]
+2017-11-27 19:52:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM ACTES WHERE NOM_CIT=S"" and prenom_cit=""[*]I "; SQL statement:
+select * from actes where nom_cit=s" and prenom_cit="i [42000-191]
+2017-11-27 19:53:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "S" not found; SQL statement:
+select * from actes where nom_cit=s and prenom_cit=i [42122-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:130)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:401)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:415)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:303)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:345)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:349)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getSetActes(MyDaosActe.java:61)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getListActes(MyDaosActe.java:80)
+	at com.sebaainf.acteNaissFr.common.SearchObject_window$AttestValidationAction.actionPerformed(SearchObject_window.java:243)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2017-11-27 19:54:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PRENOMFR_CIT" not found; SQL statement:
+select * from actes where nom_cit like 's%' and prenomFR_cit like 'i%' [42122-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.CompareLike.optimize(CompareLike.java:87)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:131)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:401)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:415)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:303)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:345)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:349)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getSetActes(MyDaosActe.java:63)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getListActes(MyDaosActe.java:82)
+	at com.sebaainf.acteNaissFr.common.SearchObject_window$AttestValidationAction.actionPerformed(SearchObject_window.java:243)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2017-11-27 20:00:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant  [22007-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:122)
+	at org.h2.value.Value.convertTo(Value.java:911)
+	at org.h2.value.Value.getTimestamp(Value.java:412)
+	at org.h2.jdbc.JdbcResultSet.getTimestamp(JdbcResultSet.java:483)
+	at com.jenkov.db.impl.mapping.method.DateSetterMapping.insertValueIntoObjectDo(DateSetterMapping.java:41)
+	at com.jenkov.db.impl.mapping.method.SetterMapping.insertValueIntoObject(SetterMapping.java:32)
+	at com.jenkov.db.impl.ObjectReader.read(ObjectReader.java:120)
+	at com.jenkov.db.impl.ObjectReader.read(ObjectReader.java:132)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:336)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:402)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:415)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:303)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:345)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:349)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getSetActes(MyDaosActe.java:63)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getListActes(MyDaosActe.java:82)
+	at com.sebaainf.acteNaissFr.common.SearchObject_window$AttestValidationAction.actionPerformed(SearchObject_window.java:243)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:297)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:140)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:120)
+	... 52 more
+2017-11-27 20:01:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant  [22007-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:122)
+	at org.h2.value.Value.convertTo(Value.java:911)
+	at org.h2.value.Value.getTimestamp(Value.java:412)
+	at org.h2.jdbc.JdbcResultSet.getTimestamp(JdbcResultSet.java:483)
+	at com.jenkov.db.impl.mapping.method.DateSetterMapping.insertValueIntoObjectDo(DateSetterMapping.java:41)
+	at com.jenkov.db.impl.mapping.method.SetterMapping.insertValueIntoObject(SetterMapping.java:32)
+	at com.jenkov.db.impl.ObjectReader.read(ObjectReader.java:120)
+	at com.jenkov.db.impl.ObjectReader.read(ObjectReader.java:132)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:336)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:402)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:415)
+	at com.jenkov.db.impl.ObjectReader.readList(ObjectReader.java:303)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:345)
+	at com.jenkov.db.impl.ObjectDao.readList(ObjectDao.java:349)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getSetActes(MyDaosActe.java:63)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getListActes(MyDaosActe.java:82)
+	at com.sebaainf.acteNaissFr.common.SearchObject_window$AttestValidationAction.actionPerformed(SearchObject_window.java:243)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:297)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:140)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:120)
+	... 52 more
+2017-11-27 23:10:46 jdbc[5]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at com.jenkov.db.jdbc.SimpleDataSource.getConnection(SimpleDataSource.java:104)
+	at com.jenkov.db.PersistenceManager.createDaos(PersistenceManager.java:250)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getListActes(MyDaosActe.java:89)
+	at com.sebaainf.acteNaissFr.common.SearchObject_window$AttestValidationAction.actionPerformed(SearchObject_window.java:243)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 49 more
+2017-11-27 23:10:46 jdbc[5]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at com.jenkov.db.jdbc.SimpleDataSource.getConnection(SimpleDataSource.java:104)
+	at com.jenkov.db.PersistenceManager.createDaos(PersistenceManager.java:250)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.getListActes(MyDaosActe.java:89)
+	at com.sebaainf.acteNaissFr.common.SearchObject_window$AttestValidationAction.actionPerformed(SearchObject_window.java:243)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 49 more

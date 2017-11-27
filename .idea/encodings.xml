@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/files/commune.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/acteNaissFr/common/Acte.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/acteNaissFr/common/ActeEditorModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/acteNaissFr/common/Commune.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/acteNaissFr/common/MyCommonUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/acteNaissFr/common/ReportedBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/acteNaissFr/common/ResultaRech_window.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/acteNaissFr/common/SearchObject_window.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/sebaainf/ismUtils/IsmComponentFactory.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

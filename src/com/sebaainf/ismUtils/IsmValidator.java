@@ -66,5 +66,6 @@ public abstract class IsmValidator implements Validator<Object> {
 
     @Override
     public abstract ValidationResult validate(Object o);
+    public abstract ValidationResult validateForSearch(Object o);
 
 }

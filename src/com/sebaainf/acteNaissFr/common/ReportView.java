@@ -21,7 +21,6 @@ import java.util.Vector;
  */
 public class ReportView {
 
-	private static String coche1, coche2, coche3;
 	private static Acte acte;
     public static void report(Acte bigBean) {
 
@@ -31,6 +30,9 @@ public class ReportView {
 
         // Preparing data
 
+          // in report.jrxml file do this to format dates : $F{simpleDateFormat}.format($F{mar_le})
+
+        acte.setSimpleDateFormat(MyCommonUtils.getMyFrDateFormat2());
         //ficheFam.prepareTexts();
         
         Collection<Acte> data = new Vector<Acte>();
@@ -49,9 +51,7 @@ public class ReportView {
 
 
             Map parameters = new HashMap();
-            parameters.put("coche1", coche1);
-            parameters.put("coche2", coche2);
-            parameters.put("coche3", coche3);
+
 
             beanDs1 = new JRBeanCollectionDataSource(data);
             //Attest obj = ((ReportedBean) beanDs1.getData().iterator().next()).getAttest();
@@ -103,7 +103,7 @@ public class ReportView {
         Vector data = new Vector<ReportedBean>();
 
         try {
-            //TODO Attest attest = MyDaos.getListAttest(nom, prenom, inFrench);
+            //TODO Attest attest = MyDaos.getListObject(nom, prenom, inFrench);
         	Acte acte = MyApp.getObj();
         	myBean = new ReportedBean(acte);
             //maFiche = new FicheFam();

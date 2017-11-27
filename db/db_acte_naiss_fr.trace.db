@@ -1,0 +1,226 @@
+2017-11-27 15:54:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Thread.java:745)
+2017-11-27 15:54:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 18:53:11 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACTE" not found; SQL statement:
+select MAX(id_acte) as id_acte from acte [42102-191]
+2017-11-27 18:55:13 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/db_acte_naiss_fr.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2460)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at com.jenkov.db.jdbc.SimpleDataSource.getConnection(SimpleDataSource.java:104)
+	at com.jenkov.db.PersistenceManager.createDaos(PersistenceManager.java:250)
+	at com.sebaainf.acteNaissFr.common.MyDaosActe.insertActe(MyDaosActe.java:82)
+	at com.sebaainf.acteNaissFr.common.CommitActionListener.actionPerformed(CommitActionListener.java:92)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/db_acte_naiss_fr.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 63 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/db_acte_naiss_fr.mv.db [1.4.191/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
+	... 58 more
+2017-11-27 18:55:13 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/db_acte_naiss_fr.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2460)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at com.jenkov.db.jdbc.SimpleDataSource.getConnection(SimpleDataSource.java:104)
+	at com.jenkov.db.PersistenceManager.createDaos(PersistenceManager.java:250)
+	at com.sebaainf.acteNaissFr.common.MyDaos.ism_lastGeneratedId(MyDaos.java:44)
+	at com.sebaainf.acteNaissFr.common.CommitActionListener.actionPerformed(CommitActionListener.java:96)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:740)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:699)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:713)
+	at java.awt.EventQueue$4.run(EventQueue.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:710)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/db_acte_naiss_fr.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 63 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/MySources/Java/acteNaissFr/db/db_acte_naiss_fr.mv.db [1.4.191/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
+	... 58 more
+2017-11-27 18:56:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACTES" not found; SQL statement:
+select MAX(id_acte) as id_acte from actes [42102-191]

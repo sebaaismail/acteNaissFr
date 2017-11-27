@@ -11,8 +11,8 @@ import java.util.*;
 //import com.sebaainf.fichfamil.common.Deces;
 
 /**
- * Created by admin on 18/05/2017.
- * Class to create new, update or delete Attests
+ * Created by admin on 27/11/2017.
+ * Class to create new, update or delete Actes
  */
 public class MyDaosActe {
 
@@ -47,16 +47,18 @@ public class MyDaosActe {
      * @param nom_cit
      * @param prenom_cit
      * @return
-     * @should return list Acte with nom prenom
+     * @should return TressSet Acte with nom prenom
      */
-    public static TreeSet<Acte> getListActes(String nom_cit, String prenom_cit) {
+    public static TreeSet<Acte> getSetActes(String nom_cit, String prenom_cit) {
 
 
         List<Acte> listObjs;
         TreeSet<Acte> setObjs = new TreeSet<Acte>();
         try {
-            String sql = "select * from actes where nom_cit='" + nom_cit +
-                    "' and prenom_cit='" + prenom_cit;
+
+            String sql = "select * from actes where nom_cit like '"
+                    + nom_cit + "%' and prenom_cit like '" + prenom_cit + "%'";
+
             IDaos daos = MyDaos.persistenceManager.createDaos();
             listObjs = daos.getObjectDao().readList(Acte.class, sql);
             if (listObjs != null) {
@@ -69,6 +71,33 @@ public class MyDaosActe {
         }
 
     }
+    /**
+     * @param nom_cit
+     * @param prenom_cit
+     * @return
+     * @should return list Acte with nom prenom
+     */
+    public static List<Acte> getListActes(String nom_cit, String prenom_cit) {
+
+
+        List<Acte> listObjs = new ArrayList<Acte>();
+        try {
+
+            String sql = "select * from actes where nom_cit like '"
+                    + nom_cit + "%' and prenom_cit like '" + prenom_cit + "%'";
+
+            IDaos daos = MyDaos.persistenceManager.createDaos();
+            listObjs = daos.getObjectDao().readList(Acte.class, sql);
+
+        } catch (PersistenceException e) {
+            e.printStackTrace();
+        } finally {
+            return listObjs;
+        }
+    }
+
+
+
 
     /**
      * method to add new Acte

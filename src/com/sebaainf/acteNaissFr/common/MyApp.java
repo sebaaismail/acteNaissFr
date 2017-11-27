@@ -26,6 +26,10 @@ public class MyApp {
     public static Color tableBackColor = Color.white;
     public static Color alternateRowColor = Color.lightGray;
     public static Date defaultDate;
+    public static String wilaya ="";
+    public static String daira = "";
+    public static String commune ="";
+
 
 
     //public static Color tableBackgColor = Color.decode("#D7EAF5");
@@ -57,6 +61,10 @@ public class MyApp {
 
         IsmPrintStream.prepareLogFile();
         IsmPrintStream.logging("Welcome to Acte en français app ");
+
+        //Commune.initilize();
+        //Commune.changeCommune();
+        Commune.readCommune();
 
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -91,8 +99,10 @@ public class MyApp {
         
         
         //AttestEditorModel attestModel = new AttestEditorModel(getObj());
-        ActeEditorModel attestModel = new ActeEditorModel(new Acte());
-        Editor_window view = new Editor_window(attestModel);
+        //ActeEditorModel acteModel = new ActeEditorModel(new Acte());
+        //Editor_window view = new Editor_window(acteModel);
+        //view.setVisible(true);
+        SearchObject_window view = new SearchObject_window();
         view.setVisible(true);
     }
     public static Acte getObj(){

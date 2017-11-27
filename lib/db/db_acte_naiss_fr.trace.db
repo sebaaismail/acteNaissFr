@@ -1,0 +1,1135 @@
+2017-11-27 13:12:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DB_ACTE_NAISS_FR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database db_acte_naiss_fr [42001-191]
+2017-11-27 13:12:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:12:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:13:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DB_ACTE_NAISS_FR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database db_acte_naiss_fr [42001-191]
+2017-11-27 13:13:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:13:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:13:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DBACTENAISSFR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database dbactenaissfr [42001-191]
+2017-11-27 13:13:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DBACTENAISSFR" not found; SQL statement:
+use dbactenaissfr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:13:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:14:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] ""db_acte_naiss_fr"" "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database "db_acte_naiss_fr" [42001-191]
+2017-11-27 13:14:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "db_acte_naiss_fr" not found; SQL statement:
+use "db_acte_naiss_fr" [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:14:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DB_ACTE_NAISS_FR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database db_acte_naiss_fr [42001-191]
+2017-11-27 13:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DB_ACTE_NAISS_FR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database db_acte_naiss_fr [42001-191]
+2017-11-27 13:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:19:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DB_ACTE_NAISS_FR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database db_acte_naiss_fr [42001-191]
+2017-11-27 13:19:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:19:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:20:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DBFR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database dbfr [42001-191]
+2017-11-27 13:20:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:20:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:22:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:23:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DB_ACTE_NAISS_FR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database db_acte_naiss_fr [42001-191]
+2017-11-27 13:23:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:23:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:27:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] DB_ACTE_NAISS_FR "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database db_acte_naiss_fr [42001-191]
+2017-11-27 13:27:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:27:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] 'db_acte_naiss_fr' "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create database 'db_acte_naiss_fr' [42001-191]
+2017-11-27 13:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:29:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "DB_ACTE_NAISS_FR" not found; SQL statement:
+use db_acte_naiss_fr [90079-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.engine.Database.getSchema(Database.java:1741)
+	at org.h2.command.dml.Set.update(Set.java:408)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1388)
+	at org.h2.server.web.WebApp.query(WebApp.java:1061)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1023)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1010)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-27 13:29:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 13:30:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 15:47:21 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+
+	UNIQUE INDEX UNIQUE_INDEX (NOM_CIT, PRENOM_CIT, DATE_NAISS_CIT, LIEU_NAISS_CIT)
+
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+
+	UNIQUE INDEX unique_index (nom_cit, prenom_cit, date_naiss_cit, lieu_naiss_cit)
+
+) [42001-191]
+2017-11-27 15:48:01 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ACTES
+(
+	ID_ACTE INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT[*],
+	ADRESSE VARCHAR(100) NULL,
+	COMMUNE VARCHAR(60) NULL,
+	WILAYA VARCHAR(60) NULL,
+	DAIRA VARCHAR(60) NULL,
+	DATE_COPIE DATE NULL,
+	DATE_DRESSE DATE NULL,
+	DATE_NAISS_CIT DATE NULL,
+	DECLARANT VARCHAR(80) NULL,
+	FAIT_LE VARCHAR(80) NULL,
+	FULLNAME_CONJ VARCHAR(80) NULL,
+	FULLNAME_MERE VARCHAR(80) NULL,
+	FULLNAME_PERE VARCHAR(80) NULL,
+	HEURE_DRESSE VARCHAR(80) NULL,
+	HEURE_NAISS_CIT VARCHAR(80) NULL,	
+	IS_F BOOLEAN DEFAULT FALSE,
+	LIEU_NAISS_CIT VARCHAR(60)NULL,
+	MAR_LE VARCHAR(60) NULL,
+	NOM_CIT VARCHAR(40) NOT NULL,
+	PRENOM_CIT VARCHAR(40) NOT NULL,
+	NUM_ACTE LONG UNSIGNED,
+) "; expected "CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE actes
+(
+	id_acte INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	adresse VARCHAR(100) NULL,
+	commune VARCHAR(60) NULL,
+	wilaya VARCHAR(60) NULL,
+	daira VARCHAR(60) NULL,
+	date_copie DATE NULL,
+	date_dresse DATE NULL,
+	date_naiss_cit DATE NULL,
+	declarant VARCHAR(80) NULL,
+	fait_le VARCHAR(80) NULL,
+	fullname_conj VARCHAR(80) NULL,
+	fullname_mere VARCHAR(80) NULL,
+	fullname_pere VARCHAR(80) NULL,
+	heure_dresse VARCHAR(80) NULL,
+	heure_naiss_cit VARCHAR(80) NULL,	
+	is_f BOOLEAN DEFAULT FALSE,
+	lieu_naiss_cit VARCHAR(60)NULL,
+	mar_le VARCHAR(60) NULL,
+	nom_cit VARCHAR(40) NOT NULL,
+	prenom_cit VARCHAR(40) NOT NULL,
+	num_acte LONG UNSIGNED,
+) [42001-191]
