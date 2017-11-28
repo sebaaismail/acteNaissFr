@@ -11,16 +11,13 @@ import com.jgoodies.validation.view.ValidationResultViewFactory;
 
 import com.sebaainf.ismUtils.IsmAbstractJFrame;
 import com.sebaainf.ismUtils.IsmButtonBarBuilder;
-import com.sebaainf.ismUtils.IsmButtonStackBuilder;
+import com.sebaainf.ismUtils.IsmCommonUtils;
 import com.sebaainf.ismUtils.IsmComponentFactory;
-import com.sebaainf.ismUtils.IsmPrintStream;
 
 import org.jdatepicker.impl.JDatePickerImpl;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,12 +25,11 @@ import java.awt.image.BufferedImage;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.EventObject;
 
 /**
@@ -220,7 +216,7 @@ public class Editor_window extends IsmAbstractJFrame {
         LayoutMap.getRoot().columnPut("label_ar", "left:pref");
         LayoutMap.getRoot().columnPut("label_fr", "right:pref");
 
-        //MyCommonUtils.setListComponentsEnabled(getListComponents(), true);
+        //IsmCommonUtils.setListComponentsEnabled(getListComponents(), true);
 
         JPanel mainPanel = new JPanel();
 
@@ -240,7 +236,7 @@ public class Editor_window extends IsmAbstractJFrame {
         };
 
 
-        MyCommonUtils.setListComponentsEnabled(getListComponents(),true);
+        IsmCommonUtils.setListComponentsEnabled(getListComponents(), true);
 
         return mainPanel;
     }
@@ -252,13 +248,11 @@ public class Editor_window extends IsmAbstractJFrame {
 
         
     	BufferedImage myPicture = null;
-		try {
-			myPicture = ImageIO.read(new File("files/northPanel.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+        //IsmCommonUtils.encryptDES("files/northPanel.bin", "files/decr.bin", "meftah85");
+        //myPicture = ImageIO.read(new File("files/northPanel.bin"));
+
+        myPicture = IsmCommonUtils.decryptDES_picture("files/data1.bin", "meftah85");
+        JLabel picLabel = new JLabel(new ImageIcon(myPicture));
         	
     	
     	JPanel pan =  FormBuilder.create()

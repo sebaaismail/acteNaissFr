@@ -1,13 +1,11 @@
 package com.sebaainf.acteNaissFr.common;
 
-import com.jenkov.db.itf.PersistenceException;
-
+import com.sebaainf.ismUtils.IsmCommonUtils;
 import com.sebaainf.ismUtils.IsmPrintStream;
 
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
-import net.sf.jasperreports.engine.xml.JRFieldFactory;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
@@ -32,7 +30,7 @@ public class ReportView {
 
           // in report.jrxml file do this to format dates : $F{simpleDateFormat}.format($F{mar_le})
 
-        acte.setSimpleDateFormat(MyCommonUtils.getMyFrDateFormat2());
+        acte.setSimpleDateFormat(IsmCommonUtils.getMyFrDateFormat2());
         //ficheFam.prepareTexts();
         
         Collection<Acte> data = new Vector<Acte>();
